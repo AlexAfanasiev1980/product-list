@@ -23,6 +23,7 @@ export default async function createFetch({
       headers: {
         "X-Auth": md5(password),
         "Content-type": "application/json",
+        referrerPolicy: "unsafe_url",
       },
     });
   } catch (error) {
