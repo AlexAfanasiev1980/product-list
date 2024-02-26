@@ -17,15 +17,20 @@ function App({ itemsPerPage }: { itemsPerPage: number }) {
   const getProducts = async () => {
     dispatch(setLoading(true));
     try {
-      await dispatch(
+      const listId: any = await dispatch(
         fetchProductsId({
           password: `Valantis_${date}`,
           offset: 0,
           limit: itemsPerPage,
         })
       );
-      dispatch(setLoading(false));
+      if (listId.error) {
+        dispatch(setLoading(false));
+        alert('Ошибка сервера. Попробуйте еще раз.')
+      }
+      console.log(listId)
     } catch (error) {
+      console.log(error);
       dispatch(setLoading(false));
     }
   };
