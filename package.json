@@ -1,6 +1,7 @@
 {
   "name": "product-list",
   "version": "0.1.0",
+  "homepage": "https://alexafanasiev1980.github.io/product-list/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.1",
