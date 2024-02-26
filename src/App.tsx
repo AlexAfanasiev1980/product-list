@@ -29,7 +29,6 @@ function App({ itemsPerPage }: { itemsPerPage: number }) {
           dispatch(setLoading(false));
           alert("Ошибка сервера. Обновите страницу.");
         }
-        console.log(listId);
       } catch (error) {
         console.log(error);
         dispatch(setLoading(false));
